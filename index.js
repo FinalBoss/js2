@@ -95,17 +95,18 @@ function processLastItem(stringList, callback) {
 function processSum(numberList, callback) {
   /* CODE HERE */
 
-  numberList = [1]
+  
 
-  function mysum (a, b) {
+  numberList = [1,2,3];
+  var sum = numberList.reduce(myFunction, 0);
 
+ function  myFunction (a, b) {
+      ++b
     return a + b
-
   }
+ 
+return callback(sum)
 
-  const num = numberList.reduce(mysum) 
-
-  return callback(num)
 }
 
 
@@ -131,15 +132,15 @@ function processSum(numberList, callback) {
 function processProduct(num1, num2, callback) {
   /* CODE HERE */
 
+ function product (num) {
 
-  function product (num) {
 
+  
+ }
 
-    num = num1 + num2 
+  
 
-  }
-
-  return callback(product(1000))
+  
 }
 
 /**
