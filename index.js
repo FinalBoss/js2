@@ -92,9 +92,23 @@ function processLastItem(stringList, callback) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum(numberList, callback) {
   /* CODE HERE */
+
+  numberList = [1]
+
+  function mysum (a, b) {
+
+    return a + b
+
+  }
+
+  const num = numberList.reduce(mysum) 
+
+  return callback(num)
 }
+
+
 
 /**
  * ### Challenge `processProduct`
@@ -114,8 +128,18 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
+function processProduct(num1, num2, callback) {
   /* CODE HERE */
+
+
+  function product (num) {
+
+
+    num = num1 + num2 
+
+  }
+
+  return callback(product(1000))
 }
 
 /**
@@ -252,8 +276,11 @@ function tallyUpDonations(/* CODE HERE */) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
+  // @ts-ignore
   const count = 0;
+  // @ts-ignore
   function counter() {
+    // @ts-ignore
     ++count
   }
   // BROKEN CODE ENDS
