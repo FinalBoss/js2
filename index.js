@@ -132,16 +132,20 @@ return callback(sum)
 function processProduct(num1, num2, callback) {
   /* CODE HERE */
 
- function product (num) {
+ function product(num) {
 
-  
 
-    num = num1 + num2
+  num = function {
 
+    num1 + num2
+
+  }
 
  }
 
-  return callback(product())
+const resultProduct = product(1000)
+
+  return callback(resultProduct)
 
   
 }
