@@ -101,7 +101,7 @@ function processSum(numberList, callback) {
   var sum = numberList.reduce(myFunction, 0);
 
  function  myFunction (a, b) {
-      ++b
+     b =  ++b
     return a + b
   }
  
@@ -135,7 +135,8 @@ function processProduct(num1, num2, callback) {
  function product (num) {
 
 
-  
+
+
  }
 
   
