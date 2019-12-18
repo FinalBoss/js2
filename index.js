@@ -134,12 +134,14 @@ function processProduct(num1, num2, callback) {
 
  function product (num) {
 
+  
 
+    num = num1 + num2
 
 
  }
 
-  
+  return callback(product())
 
   
 }
