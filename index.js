@@ -48,8 +48,11 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
+function processLength(list, callback) {
   /* CODE HERE */
+
+  return callback(list.length) 
+
 }
 
 /**
@@ -66,8 +69,10 @@ function processLength(/* CODE HERE */) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
+function processLastItem(stringList, callback) {
   /* CODE HERE */
+
+  return callback(stringList.slice(-1)[0])
 }
 
 /**
@@ -87,9 +92,24 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum(numberList, callback) {
   /* CODE HERE */
+
+  
+
+  numberList = [1,2,3];
+  var sum = numberList.reduce(myFunction, 0);
+
+ function  myFunction (a, b) {
+     b =  ++b
+    return a + b
+  }
+ 
+return callback(sum)
+
 }
+
+
 
 /**
  * ### Challenge `processProduct`
@@ -109,8 +129,25 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
+function processProduct(num1, num2, callback) {
   /* CODE HERE */
+
+ function product(num) {
+
+
+  num = function {
+
+    num1 + num2
+
+  }
+
+ }
+
+const resultProduct = product(1000)
+
+  return callback(resultProduct)
+
+  
 }
 
 /**
@@ -247,8 +284,11 @@ function tallyUpDonations(/* CODE HERE */) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
+  // @ts-ignore
   const count = 0;
+  // @ts-ignore
   function counter() {
+    // @ts-ignore
     ++count
   }
   // BROKEN CODE ENDS
